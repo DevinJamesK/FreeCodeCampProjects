@@ -18,6 +18,7 @@ function randomQuote() {
 
 randomQuote();
 
-$("button").onclick(function() {
-    randomQuote();
-});
+
+	$("button").click(function() {
+		randomQuote();
+	});
