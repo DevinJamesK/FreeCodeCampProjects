@@ -10,15 +10,19 @@ function randomQuote() {
         },
 
         success: function(quote) {
+            if (quote.quoteAuthor != "") {
+                $("#author").html("-" + quote.quoteAuthor);
+            } else {
+                $("#author").html("-" + Unknown);
+            }
             $("#quote").html(quote.quoteText);
-            $("#author").html(quote.quoteAuthor);
+
         }
     });
 }
 
 randomQuote();
 
-
-	$("button").click(function() {
-		randomQuote();
-	});
+$("button").click(function() {
+    randomQuote();
+});
