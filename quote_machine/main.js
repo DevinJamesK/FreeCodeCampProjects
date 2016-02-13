@@ -21,8 +21,9 @@ function randomQuote() {
     });
 }
 
-randomQuote();
-
-$("button").click(function() {
+$(document).ready(function () {
     randomQuote();
+    $("button").click(function() {
+        randomQuote();
+    });
 });
